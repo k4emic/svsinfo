@@ -36,8 +36,8 @@ class NewsItem(models.Model):
     title = models.CharField(max_length=100)
     text = models.TextField();
     time = models.DateTimeField()
-    event = models.ForeignKey(Event, null=True)
-    activity = models.ForeignKey(Activity, null=True)
+    event = models.ForeignKey(Event, blank=True, null=True)
+    activity = models.ForeignKey(Activity, blank=True, null=True)
     
     def __unicode__(self):
         return self.title
