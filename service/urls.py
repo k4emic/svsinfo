@@ -1,15 +1,8 @@
 from django.conf.urls import patterns, url
-from service import models
+from service.model_resources import LocationResource, AreaResource, EventResource, ActivityResource, NewsItemResource
 
 # rest framework
-from djangorestframework.resources import ModelResource
 from djangorestframework.views import ListOrCreateModelView, InstanceModelView
-
-class LocationResource(ModelResource):
-    model = models.Location
-    
-class AreaResource(ModelResource):
-    model = models.Area
     
 def get_standard_patterns(url_prefix, model_resource):
 
@@ -23,3 +16,6 @@ def get_standard_patterns(url_prefix, model_resource):
 
 urlpatterns = get_standard_patterns('locations', LocationResource)
 urlpatterns += get_standard_patterns('areas', AreaResource)
+urlpatterns += get_standard_patterns('events', EventResource)
+urlpatterns += get_standard_patterns('activities', ActivityResource)
+urlpatterns += get_standard_patterns('news', NewsItemResource)
