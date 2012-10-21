@@ -1,10 +1,8 @@
-from django.http import HttpResponse
-from django.template import Context, loader
+from djangorestframework.views import View
 
-def index(request):
-    t = loader.get_template("service/index")
-    c = Context({
-        'foo': 'bar'
-    })
+class LocationRoot(View):
+    def get(self, request):
+        return None
     
-    return HttpResponse(t.render(c))
+    def post(self, request):
+        return None
