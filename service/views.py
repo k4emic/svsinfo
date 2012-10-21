@@ -1,8 +1,5 @@
-from djangorestframework.views import View
+from djangorestframework.views import ListOrCreateModelView
+from djangorestframework.permissions import IsUserOrIsAnonReadOnly
 
-class LocationRoot(View):
-    def get(self, request):
-        return None
-    
-    def post(self, request):
-        return None
+class AuthListOrCreateView(ListOrCreateModelView):
+    permissions = (IsUserOrIsAnonReadOnly, )
