@@ -13,7 +13,7 @@ class Area(models.Model):
     def __unicode__(self):
         return self.name
 
-class Event(models.Model):
+class Convention(models.Model):
     name = models.CharField(max_length=50)
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
@@ -22,11 +22,13 @@ class Event(models.Model):
     def __unicode__(self):
         return self.name
 
-class Activity(models.Model):
+class Event(models.Model):
     name = models.CharField(max_length=100)
+    description = models.TextField()
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
-    event = models.ForeignKey(Event)
+    
+    convention = models.ForeignKey(Convention)
     area = models.ForeignKey(Area)
     
     def __unicode__(self):
@@ -36,8 +38,10 @@ class NewsItem(models.Model):
     title = models.CharField(max_length=100)
     text = models.TextField();
     time = models.DateTimeField()
+    
+    convention = models.ForeignKey(Convention, blank=True, null=True)
     event = models.ForeignKey(Event, blank=True, null=True)
-    activity = models.ForeignKey(Activity, blank=True, null=True)
     
     def __unicode__(self):
         return self.title
+    
