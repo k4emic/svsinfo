@@ -39,7 +39,7 @@ class NewsItem(models.Model):
     text = models.TextField();
     time = models.DateTimeField()
     
-    convention = models.ForeignKey(Convention, blank=True, null=True)
+    convention = models.ForeignKey(Convention)
     event = models.ForeignKey(Event, blank=True, null=True)
     
     def __unicode__(self):
