@@ -35,14 +35,6 @@ class EventList(generics.ListAPIView):
 class EventDetail(generics.RetrieveAPIView):
     model = models.Event
     serializer_class = serializers.EventSerializer
-    
-class NewsItemList(generics.ListAPIView):
-    model = models.NewsItem
-    serializer_class = serializers.NewsItemSerializer
-    
-class NewsItemDetail(generics.RetrieveAPIView):
-    model = models.NewsItem
-    serializer_class = serializers.NewsItemSerializer
 
 class AreaList(generics.ListAPIView):
     model = models.Area
