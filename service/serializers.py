@@ -1,4 +1,4 @@
-from service.models import Convention, Location, Area, Event
+from service.models import Convention, Location, Area, Event, NewsItem
 from rest_framework import serializers
 
 class ConventionListSerializer(serializers.HyperlinkedModelSerializer):
@@ -34,4 +34,11 @@ class EventSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Event
         fields = ('name', 'url', 'convention', 'area')
+
+
+class NewsItemSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = NewsItem
+        fields = ('title', 'time', 'convention', 'event')
+
 

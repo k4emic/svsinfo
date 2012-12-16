@@ -31,6 +31,9 @@ class Event(models.Model):
     convention = models.ForeignKey(Convention)
     area = models.ForeignKey(Area)
     
+    class Meta:
+        ordering = ('start_time', 'name')
+    
     def __unicode__(self):
         return self.name
 
