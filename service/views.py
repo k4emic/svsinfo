@@ -3,8 +3,8 @@ from rest_framework.decorators import api_view
 from rest_framework.reverse import reverse
 from rest_framework.response import Response
 
-from serializers import ConventionSerializer, ConventionListSerializer, LocationSerializer
-from models import Convention, Location
+import serializers
+import models
 
 @api_view(['GET'])
 def api_home(request):
@@ -12,21 +12,50 @@ def api_home(request):
         'conventions': reverse('convention-list', request=request),
     })
     
+class ConventionsList(generics.ListAPIView):
+    model = models.Convention
+    serializer_class = serializers.ConventionListSerializer
     
 class ConventionDetail(generics.RetrieveAPIView):
-    model = Convention
-    serializer_class = ConventionSerializer
+    model = models.Convention
+    serializer_class = serializers.ConventionSerializer
     
-class ConventionsList(generics.ListAPIView):
-    model = Convention
-    serializer_class = ConventionListSerializer
-
 class LocationsList(generics.ListAPIView):
-    model = Location
-    serializer_class = LocationSerializer
-    
+    model = models.Location
+    serializer_class = serializers.LocationSerializer
     
 class LocationDetail(generics.RetrieveAPIView):
-    model = Location
-    serializer_class = LocationSerializer
+    model = models.Location
+    serializer_class = serializers.LocationSerializer
+    
+class EventList(generics.ListAPIView):
+    model = models.Event
+    serializer_class = serializers.EventSerializer
+    
+class EventDetail(generics.RetrieveAPIView):
+    model = models.Event
+    serializer_class = serializers.EventSerializer
+    
+class NewsItemList(generics.ListAPIView):
+    model = models.NewsItem
+    serializer_class = serializers.NewsItemSerializer
+    
+class NewsItemDetail(generics.RetrieveAPIView):
+    model = models.NewsItem
+    serializer_class = serializers.NewsItemSerializer
 
+class AreaList(generics.ListAPIView):
+    model = models.Area
+    serializer_class = serializers.AreaSerializer
+
+class AreaDetail(generics.RetrieveAPIView):
+    model = models.Area
+    serializer_class = serializers.AreaSerializer
+
+class NewsList(generics.ListAPIView):
+    model = models.NewsItem
+    serializer_class = serializers.NewsItemSerializer
+
+class NewsDetail(generics.RetrieveAPIView):
+    model = models.NewsItem
+    serializer_class = serializers.NewsItemSerializer

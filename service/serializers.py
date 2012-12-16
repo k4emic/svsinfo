@@ -5,9 +5,9 @@ class ConventionListSerializer(serializers.HyperlinkedModelSerializer):
     
     class Meta:
         model = Convention
-        fields = ('url', 'name', 'start_time', 'end_time')
+        fields = ('name', 'start_time', 'end_time')
 
-class ConventionSerializer(serializers.HyperlinkedModelSerializer):
+class ConventionSerializer(serializers.ModelSerializer):
     
     events = serializers.ManyHyperlinkedRelatedField(source='event_set', view_name='event-detail')
     
@@ -16,7 +16,7 @@ class ConventionSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('name', 'start_time', 'end_time', 'location', 'events')
         
 
-class LocationSerializer(serializers.HyperlinkedModelSerializer):
+class LocationSerializer(serializers.ModelSerializer):
     
     areas = serializers.ManyHyperlinkedRelatedField(source='area_set', view_name='area-detail')
     
@@ -25,18 +25,18 @@ class LocationSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('name', 'areas')
         
         
-class AreaSerializer(serializers.HyperlinkedModelSerializer):
+class AreaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Area
         fields = ('name', 'location')
 
-class EventSerializer(serializers.HyperlinkedModelSerializer):
+class EventSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
-        fields = ('name', 'url', 'convention', 'area')
+        fields = ('name', 'convention', 'area')
 
 
-class NewsItemSerializer(serializers.HyperlinkedModelSerializer):
+class NewsItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = NewsItem
         fields = ('title', 'time', 'convention', 'event')
