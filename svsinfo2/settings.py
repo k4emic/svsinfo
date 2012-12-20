@@ -106,11 +106,7 @@ ROOT_URLCONF = 'svsinfo2.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'svsinfo2.wsgi.application'
 
-import os
-PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
-
 TEMPLATE_DIRS = (
-    os.path.join(PROJECT_PATH, 'templates')
 )
 
 INSTALLED_APPS = (
@@ -127,6 +123,7 @@ INSTALLED_APPS = (
     'service',
     'rest_framework',
     'debug_toolbar',
+    'webclient'
 )
 
 # A sample logging configuration. The only tangible logging
