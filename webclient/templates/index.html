@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {{ convention.name }}
+    
+    <ol>
+    {% for event in past_events %}
+        <li>{{ event.name }}</li>
+    {% endfor %}
+    
+        <li>end of past</li>
+    
+    {% for event in current_events %}
+        <li>{{ event.name }}</li>
+    {% endfor %}
+    
+        <li>end of current</li>
+    {% for event in future_events %}
+        <li>{{ event.name }}</li>
+    {% endfor %}
+    
+    </ol>
+{% endblock %}

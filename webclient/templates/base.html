@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{% block pagetitle %}My default page title{% endblock %}</title>
+    <title>{% block pagetitle %}SVScon information{% endblock %}</title>
 
     <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
     <style>
@@ -15,27 +15,13 @@
 
   <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="#">Project name</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
-
     <div class="container">
-
-      <h1>Bootstrap starter template</h1>
-      <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
-
-    </div> <!-- /container -->
+        
+        {% block content %}
+        
+        {% endblock %}
+        
+    </div><!-- /container -->
     
     <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
   </body>
