@@ -1,1 +1,931 @@
-[{"pk": 9, "model": "contenttypes.contenttype", "fields": {"model": "area", "name": "area", "app_label": "service"}}, {"pk": 4, "model": "contenttypes.contenttype", "fields": {"model": "contenttype", "name": "content type", "app_label": "contenttypes"}}, {"pk": 10, "model": "contenttypes.contenttype", "fields": {"model": "convention", "name": "convention", "app_label": "service"}}, {"pk": 11, "model": "contenttypes.contenttype", "fields": {"model": "event", "name": "event", "app_label": "service"}}, {"pk": 2, "model": "contenttypes.contenttype", "fields": {"model": "group", "name": "group", "app_label": "auth"}}, {"pk": 8, "model": "contenttypes.contenttype", "fields": {"model": "location", "name": "location", "app_label": "service"}}, {"pk": 7, "model": "contenttypes.contenttype", "fields": {"model": "logentry", "name": "log entry", "app_label": "admin"}}, {"pk": 12, "model": "contenttypes.contenttype", "fields": {"model": "newsitem", "name": "news item", "app_label": "service"}}, {"pk": 1, "model": "contenttypes.contenttype", "fields": {"model": "permission", "name": "permission", "app_label": "auth"}}, {"pk": 5, "model": "contenttypes.contenttype", "fields": {"model": "session", "name": "session", "app_label": "sessions"}}, {"pk": 6, "model": "contenttypes.contenttype", "fields": {"model": "site", "name": "site", "app_label": "sites"}}, {"pk": 3, "model": "contenttypes.contenttype", "fields": {"model": "user", "name": "user", "app_label": "auth"}}, {"pk": "5c59b123e9c0ecf7b3805e87097923ad", "model": "sessions.session", "fields": {"expire_date": "2012-12-27T15:18:41Z", "session_data": "MWQ2YTQ0ZjM3YmQyYjY0ZGMzYWE2MDJmOWY0OTQ0MjMzMTJhOTRlMjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQF1Lg==\n"}}, {"pk": 1, "model": "sites.site", "fields": {"domain": "example.com", "name": "example.com"}}, {"pk": 1, "model": "service.location", "fields": {"name": "Herning sportscenter"}}, {"pk": 1, "model": "service.area", "fields": {"name": "Multihallen", "location": 1}}, {"pk": 2, "model": "service.area", "fields": {"name": "Eventrum 1", "location": 1}}, {"pk": 3, "model": "service.area", "fields": {"name": "Eventrum 2", "location": 1}}, {"pk": 4, "model": "service.area", "fields": {"name": "Eventsalen", "location": 1}}, {"pk": 5, "model": "service.area", "fields": {"name": "Cosplay hallen", "location": 1}}, {"pk": 6, "model": "service.area", "fields": {"name": "Fan event omr\u00e5det", "location": 1}}, {"pk": 1, "model": "service.convention", "fields": {"start_time": "2012-05-11T18:00:00Z", "location": 1, "name": "SVScon 2012", "end_time": "2012-05-13T15:00:00Z"}}, {"pk": 1, "model": "service.event", "fields": {"name": "Velkomst", "area": 1, "start_time": "2012-05-11T19:00:00Z", "end_time": "2012-05-11T19:30:00Z", "convention": 1, "description": "SVScon byder deltagerne velkommen og kommer med generel og nyttig information."}}, {"pk": 2, "model": "service.event", "fields": {"name": "Auktion", "area": 1, "start_time": "2012-05-11T21:30:00Z", "end_time": "2012-05-12T01:30:00Z", "convention": 1, "description": ""}}, {"pk": 3, "model": "service.event", "fields": {"name": "Orienteringsl\u00f8b", "area": 2, "start_time": "2012-05-11T21:30:00Z", "end_time": "2012-05-11T22:30:00Z", "convention": 1, "description": "I orienteringsl\u00f8bet f\u00e5r du mulighed for at blive bedre til at finde rundt p\u00e5 connen samtidig med at du l\u00f8se forskellige opgaver ved 5 poster. Du vil komme p\u00e5 hold med 4 andre personer. Ved hver post vil I f\u00e5 stillet en udfordring, og s\u00e5 vil I f\u00e5 point alt efter, hvor godt I l\u00f8ser den. "}}, {"pk": 4, "model": "service.event", "fields": {"name": "Musikquiz", "area": 2, "start_time": "2012-05-11T23:00:00Z", "end_time": "2012-05-11T23:40:00Z", "convention": 1, "description": "Kom og afpr\u00f8v dit kendskab til anime openings og endings. Der bliver spillet et klip fra en sang, og s\u00e5 g\u00e6lder det om at trykke sig ind, hvis man ved hvilken anime det er fra. De fleste sange bliver afspillet normalt, men enkelte afspilles med h\u00f8jere hastighed end normalt for at give lidt ekstra udfordring. "}}, {"pk": 5, "model": "service.event", "fields": {"name": "Biografen \u00e5bner", "area": 3, "start_time": "2012-05-11T23:00:00Z", "end_time": "2012-05-12T03:00:00Z", "convention": 1, "description": ""}}, {"pk": 6, "model": "service.event", "fields": {"name": "G\u00e6t et klip", "area": 1, "start_time": "2012-05-12T10:00:00Z", "end_time": "2012-05-12T11:00:00Z", "convention": 1, "description": "Har du et godt \u00f8je, n\u00e5r det kommer til anime og har du let ved at genkende scener, s\u00e5 er denne quiz lige noget for dig. Der vil blive spillet en r\u00e6kke klip uden lyd, og s\u00e5 skal man g\u00e6tte, hvilke anime klippene er fra."}}, {"pk": 7, "model": "service.event", "fields": {"name": "In-character Hetalia panel", "area": 2, "start_time": "2012-05-12T10:00:00Z", "end_time": "2012-05-12T11:30:00Z", "convention": 1, "description": "Hetalia panelet foreg\u00e5r in-character og handler s\u00e5 at sige om, at de 8 lande der har stillet sig til r\u00e5dighed vil v\u00e6re in-character fra start til slut p\u00e5 panelet. Under panelet vil man blive indbudt til en verdenskonference, hvor det denne gang ikke bare handler om landene der sidder og snakker, men nu kan publikum ogs\u00e5 stille sp\u00f8rgsm\u00e5l og f\u00e5 svar.\nDer vil evt. ske sm\u00e5 handlingsforl\u00f8b, s\u00e5som at et panelmedlem kommer for sent og s\u00e5 vil der blive bygget lidt historie p\u00e5 det, s\u00e5 det ikke bliver for t\u00f8rt at stille sp\u00f8rgsm\u00e5l hele tiden. (-s\u00e5 der er ogs\u00e5 en anelse act over eventet)"}}, {"pk": 8, "model": "service.event", "fields": {"name": "Holdquiz", "area": 1, "start_time": "2012-05-12T11:00:00Z", "end_time": "2012-05-12T13:00:00Z", "convention": 1, "description": "Hvis du har et bredt kendskab til anime og manga, er denne quiz lige noget for dig \u2013 og selv hvis du ikke har, kan du komme p\u00e5 hold med nogle der har. 10 hold med 5 personer p\u00e5 hvert dyster imod hinanden i forskellige kategorier, som b\u00e5de indeholder almindelig tekstsp\u00f8rgsm\u00e5l men ogs\u00e5 billeder og meget mere."}}, {"pk": 9, "model": "service.event", "fields": {"name": "Spilquiz", "area": 1, "start_time": "2012-05-12T13:00:00Z", "end_time": "2012-05-12T14:20:00Z", "convention": 1, "description": "Der quizzes om spilviden, og endnu engang k\u00f8rer vi p\u00e5 et eksperimenterende stadie, hvor vi h\u00e5ber at vi har forbedret os siden sidste \u00e5r. Vi har nye kategorier, som eksempelvis \u201dg\u00e6t karakteren p\u00e5 billedet\u201d. Holdene tr\u00e6kkes tilf\u00e6ldigt, og vi lukker folk ind, indtil vi f\u00f8ler at vi har n\u00e5et maximum for hvad der b\u00f8r deltage."}}, {"pk": 10, "model": "service.event", "fields": {"name": "Chopstick Champion", "area": 1, "start_time": "2012-05-12T15:00:00Z", "end_time": "2012-05-12T16:30:00Z", "convention": 1, "description": "Flyt ting med spisepinde og bliv den ultimative chopstick champion!"}}, {"pk": 11, "model": "service.event", "fields": {"name": "Tegn og G\u00e6t", "area": 1, "start_time": "2012-05-12T17:00:00Z", "end_time": "2012-05-12T18:30:00Z", "convention": 1, "description": "Tegn og g\u00e6t p\u00e5 storsk\u00e6rm. Det g\u00e6lder om at tegne titler eller figurer fra anime og manga, og s\u00e5 skal publikum g\u00e6tte, hvad man tegner. "}}, {"pk": 12, "model": "service.event", "fields": {"name": "Mafia", "area": 1, "start_time": "2012-05-13T00:00:00Z", "end_time": "2012-05-13T04:00:00Z", "convention": 1, "description": "Mafia er en form for rollespil, meget ligesom Werewolves, det spilles bare p\u00e5 en lidt anden m\u00e5de med meget mere snak. I Mafia f\u00e5r du uddelt en rolle, enten kan du v\u00e6re mafia eller du kan v\u00e6re et medlem af byen. Det g\u00e6lder s\u00e5 om for de 2 grupper at sl\u00e5 hinanden ihjel (man sidder p\u00e5 en stol og f\u00e5r afvide hvis man d\u00f8r, intet farligt her). Byen som mafiaen er en del af h\u00e6nger en person om dagen, som kan v\u00e6re mafia, mens mafiaen v\u00e5gner op om natten og v\u00e6lger hvem de vil skyde den nat. Der er selvf\u00f8lgelig mange flere roller, alt vil blive forklaret for folk der ikke har spillet det f\u00f8r, og spillet er virkelig nemt og sjovt. "}}, {"pk": 13, "model": "service.event", "fields": {"name": "Hit med Anime\u2019en!", "area": 2, "start_time": "2012-05-12T12:00:00Z", "end_time": "2012-05-12T13:00:00Z", "convention": 1, "description": "Vi kender alle sammen \u2019Hit med Sangen\u2019 hvor folkene p\u00e5 hvert hold skal g\u00e6tte hvilken sang der bliver talt om/spillet. Det har vi nu ogs\u00e5 f\u00e5et i anime form! Her g\u00e6lder det om for deltageren at synge med p\u00e5 en karaoke video som kun han/hun ser, og de resterende deltagere skal derefter g\u00e6tte hvilken anime serie sangen er fra. Det er tilladt at nynne hvis man har problemer med udtalelse af det japanske sprog. Det er en fordel at kende mange sange p\u00e5 tv\u00e6rs af genrerne, men intet krav :) God forn\u00f8jelse!"}}, {"pk": 14, "model": "service.event", "fields": {"name": "Werewolves", "area": 1, "start_time": "2012-05-12T01:00:00Z", "end_time": "2012-05-12T03:00:00Z", "convention": 1, "description": ""}}, {"pk": 15, "model": "service.event", "fields": {"name": "Panel: Det danske fanmilj\u00f8", "area": 2, "start_time": "2012-05-12T13:00:00Z", "end_time": "2012-05-12T14:30:00Z", "convention": 1, "description": "I dette panel kan du m\u00f8de personer fra forskellige initiativer i det danske fanmilj\u00f8. De vil snakke om forskellige emner, og der vil ogs\u00e5 v\u00e6re mulighed for at stille sp\u00f8rgsm\u00e5l til dem. Der vil v\u00e6re repr\u00e6sentanter fra f\u00f8lgende initiativer: Herning Anime Forening (HAF), SVScon, Genki, Anime Kita, K\u00f8benhavn\u2019s Anime Forening (KAF), J-Popcon og AniManga."}}, {"pk": 16, "model": "service.event", "fields": {"name": "Turen g\u00e5r til japan", "area": 2, "start_time": "2012-05-12T14:30:00Z", "end_time": "2012-05-12T15:30:00Z", "convention": 1, "description": "Foredrag om, hvordan det er at rejse i Japan og hvad man skal huske f\u00f8r og under rejsen. Der vil blive taget udgangspunkt i byerne Tokyo, Kyoto, Osaka, Takayama og Hiroshima."}}, {"pk": 17, "model": "service.event", "fields": {"name": "Surprise konsolkonkurrence", "area": 2, "start_time": "2012-05-12T16:00:00Z", "end_time": "2012-05-12T16:30:00Z", "convention": 1, "description": "Der dystes i forskellige konsolspil. Hvilke spil det er tilf\u00e6ldigt og hemmeligt indtil tidspunktet hvor konkurrencen g\u00e5r i gang. Det er ikke nok kun at v\u00e6re mester i kampsports spil eller shooters for eksempel. Alle skillz skal p\u00e5 banen her!"}}, {"pk": 18, "model": "service.event", "fields": {"name": "Speed-meeting", "area": 3, "start_time": "2012-05-12T09:30:00Z", "end_time": "2012-05-12T11:00:00Z", "convention": 1, "description": "Navnet siger vel meget sig selv, speed-meeting. Det g\u00e5r ud p\u00e5 at folk hurtigt kan pr\u00f8ve at skabe nye kontakter."}}, {"pk": 19, "model": "service.event", "fields": {"name": "Yugioh turnering", "area": 3, "start_time": "2012-05-12T11:30:00Z", "end_time": "2012-05-12T16:30:00Z", "convention": 1, "description": "Er du ogs\u00e5 facineret af Yugioh? Har du et deck der opfylder TCG limited and forbidden listen der findes her http://www.yugioh-card.com/uk/limited/, s\u00e5 det nu du skal v\u00e6re med til SVScons Yugioh turnering, fyldt med kampe for at blive den bedste! Alt det kr\u00e6ver, er bare at du har dine egne kort med og er klar til at k\u00e6mpe mod andre i vores turnering, og selvf\u00f8lgelig skal vores vores vindere da ikke g\u00e5 tomh\u00e6ndet hjem, nej vores bedste spillere f\u00e5r da nogle pr\u00e6mier! Find ud af hvad til eventet! It\u2019s time to duel!"}}, {"pk": 20, "model": "service.event", "fields": {"name": "DKos panel", "area": 3, "start_time": "2012-05-12T16:00:00Z", "end_time": "2012-05-12T17:30:00Z", "convention": 1, "description": "DKos er Danmarks nye cosplay magasine med fokus p\u00e5 cosplay i alle former. Kom forbi panelet og deltag i en debat hvor din mening betyder noget. For nye som gamle!"}}, {"pk": 21, "model": "service.event", "fields": {"name": "Biografen \u00e5bner", "area": 3, "start_time": "2012-05-12T23:00:00Z", "end_time": "2012-05-13T03:00:00Z", "convention": 1, "description": ""}}, {"pk": 22, "model": "service.event", "fields": {"name": "Lolita loppemarked", "area": 4, "start_time": "2012-05-12T12:30:00Z", "end_time": "2012-05-12T14:30:00Z", "convention": 1, "description": "Lolita loppemarkedet vil v\u00e6re din chance for enten at komme af med noget J-fasion t\u00f8j du ikke bruger l\u00e6ngere, eller at udvide din garderobe med l\u00e6kre genbrugs fund! Om du er ny eller gammel i stilen betyder ikke det store! Sl\u00e5 et smut forbi og se om du kan g\u00f8re et kup, enten som s\u00e6lger eller k\u00f8ber!"}}, {"pk": 23, "model": "service.event", "fields": {"name": "Go fetch", "area": 4, "start_time": "2012-05-12T14:30:00Z", "end_time": "2012-05-12T15:30:00Z", "convention": 1, "description": "Kan du t\u00e6nke hurtigt og kreativt? Go fetch handler om at finde ting rundt omkring p\u00e5 connen p\u00e5 tid. Den person, der f\u00f8rst kommer tilbage med det rigtige, scorer et point til sit hold. "}}, {"pk": 24, "model": "service.event", "fields": {"name": "Plushie rageri", "area": 4, "start_time": "2012-05-12T16:00:00Z", "end_time": "2012-05-12T17:00:00Z", "convention": 1, "description": "Find en plushie med bind for \u00f8jnene"}}, {"pk": 25, "model": "service.event", "fields": {"name": "Style pose off", "area": 4, "start_time": "2012-05-12T17:00:00Z", "end_time": "2012-05-12T18:30:00Z", "convention": 1, "description": "Vi tager pose off et skridt videre, og lader deltagerne v\u00e6re kreative. Frem for bare at efterligne en pose g\u00e6lder det om at finde p\u00e5 en pose, der passer til det ord, man f\u00e5r udleveret."}}, {"pk": 26, "model": "service.event", "fields": {"name": "Quizl\u00f8b", "area": 1, "start_time": "2012-05-13T10:00:00Z", "end_time": "2012-05-13T12:00:00Z", "convention": 1, "description": "Dette er en quiz for dem der kan t\u00e6nke hurtigt og er rappe p\u00e5 f\u00f8dderne. Man dyster imod andre hold i forskellige kategorier som G\u00e6t en tegning, Billedzoom og G\u00e6t titlen. En udvalgt person fra holdet l\u00f8ber ind til midten og svarer. Det hold der f\u00f8rst finder det rigtige svar, og n\u00e5r ind til midten f\u00f8rst scorer point.  Alle personer p\u00e5 holdet, kommer til at l\u00f8be. "}}, {"pk": 27, "model": "service.event", "fields": {"name": "Hobo Cosplay", "area": 1, "start_time": "2012-05-13T12:00:00Z", "end_time": "2012-05-13T13:00:00Z", "convention": 1, "description": "Cosplay like a hobo! Konkurrer med andre hobo's om at lave det bedste cosplay p\u00e5 tid!"}}, {"pk": 28, "model": "service.event", "fields": {"name": "Last man standing", "area": 1, "start_time": "2012-05-13T13:00:00Z", "end_time": "2012-05-13T14:00:00Z", "convention": 1, "description": "I last man standing er det hver mand og kvinde for sig selv, n\u00e5r deltagerne skal v\u00e6lge det rigtige svar ud af tre mulige for ikke at blive elimineret fra runden. Deltageren der st\u00e5r alene tilbage er last man standing. Quizzen afholdes i flere runder med pr\u00e6mie til de begavede og/eller heldige vindere."}}, {"pk": 29, "model": "service.event", "fields": {"name": "Last man standing hardcore edition", "area": 1, "start_time": "2012-05-13T14:00:00Z", "end_time": "2012-05-13T14:20:00Z", "convention": 1, "description": "Er du h\u00e5rd nok til at svare p\u00e5 alle sp\u00f8rgsm\u00e5lene i den sv\u00e6re udgaver af Last Man Standing? Sp\u00f8rgsm\u00e5lene er betydeligt sv\u00e6rere i denne udgave og der udpeges kun en vinder."}}, {"pk": 30, "model": "service.event", "fields": {"name": "Afslutningsceremoni", "area": 1, "start_time": "2012-05-13T14:30:00Z", "end_time": "2012-05-13T14:50:00Z", "convention": 1, "description": "Afrunding p\u00e5 connen, hvor de sidste pr\u00e6mier ogs\u00e5 deles ud."}}, {"pk": 31, "model": "service.event", "fields": {"name": "EuroCosplay foredrag", "area": 2, "start_time": "2012-05-13T10:00:00Z", "end_time": "2012-05-13T10:50:00Z", "convention": 1, "description": "Kom og m\u00f8d SVScons repr\u00e6sentant til EuroCosplay fra 2011. H\u00f8r om hendes tur til London Expo og hvordan det var at deltage i EuroCosplay."}}, {"pk": 32, "model": "service.event", "fields": {"name": "Timeline Quiz", "area": 2, "start_time": "2012-05-13T11:00:00Z", "end_time": "2012-05-13T12:00:00Z", "convention": 1, "description": "Vi har samlet en masse klassikere lige fra den sp\u00e6de start af anime og indtil de sidste nye hits. S\u00e5 er du god til at huske serie og hvorn\u00e5r de udkom i Japan, s\u00e5 er dette lige en quiz for dig. "}}, {"pk": 33, "model": "service.event", "fields": {"name": "Konsolkonkurrence", "area": 2, "start_time": "2012-05-13T12:00:00Z", "end_time": "2012-05-13T13:30:00Z", "convention": 1, "description": ""}}, {"pk": 34, "model": "service.event", "fields": {"name": "SVScons fremtid", "area": 2, "start_time": "2012-05-13T13:30:00Z", "end_time": "2012-05-13T14:30:00Z", "convention": 1, "description": "Her f\u00e5r du mulighed for at f\u00e5 indflydelse p\u00e5 SVScons fremtid. Har du forslag til ting der skal \u00e6ndres eller tilf\u00f8jes? Synes du noget er godt og ikke skal \u00e6ndres? S\u00e5 er dette panelet, hvor du kan udtrykke dig. Dette panel burde blive meget interessant og relevant i \u00e5r, da der grundet J-Popcons flytning til februar vil v\u00e6re nogle ekstra overvejelser, der skal g\u00f8res."}}, {"pk": 35, "model": "service.event", "fields": {"name": "Kanji workshop", "area": 3, "start_time": "2012-05-13T10:00:00Z", "end_time": "2012-05-13T11:00:00Z", "convention": 1, "description": "En workshop hvor deltagerne kan l\u00e6re at tegne kanji (japanske skrifttegn). De grundl\u00e6ggende kanji vil blive vist og \u00f8vet, men der kan ogs\u00e5 tegnes kanji efter forslag."}}, {"pk": 36, "model": "service.event", "fields": {"name": "Tanto Cuore turnering", "area": 3, "start_time": "2012-05-13T11:00:00Z", "end_time": "2012-05-13T14:30:00Z", "convention": 1, "description": ""}}, {"pk": 19, "model": "auth.permission", "fields": {"codename": "add_logentry", "name": "Can add log entry", "content_type": 7}}, {"pk": 20, "model": "auth.permission", "fields": {"codename": "change_logentry", "name": "Can change log entry", "content_type": 7}}, {"pk": 21, "model": "auth.permission", "fields": {"codename": "delete_logentry", "name": "Can delete log entry", "content_type": 7}}, {"pk": 4, "model": "auth.permission", "fields": {"codename": "add_group", "name": "Can add group", "content_type": 2}}, {"pk": 5, "model": "auth.permission", "fields": {"codename": "change_group", "name": "Can change group", "content_type": 2}}, {"pk": 6, "model": "auth.permission", "fields": {"codename": "delete_group", "name": "Can delete group", "content_type": 2}}, {"pk": 1, "model": "auth.permission", "fields": {"codename": "add_permission", "name": "Can add permission", "content_type": 1}}, {"pk": 2, "model": "auth.permission", "fields": {"codename": "change_permission", "name": "Can change permission", "content_type": 1}}, {"pk": 3, "model": "auth.permission", "fields": {"codename": "delete_permission", "name": "Can delete permission", "content_type": 1}}, {"pk": 7, "model": "auth.permission", "fields": {"codename": "add_user", "name": "Can add user", "content_type": 3}}, {"pk": 8, "model": "auth.permission", "fields": {"codename": "change_user", "name": "Can change user", "content_type": 3}}, {"pk": 9, "model": "auth.permission", "fields": {"codename": "delete_user", "name": "Can delete user", "content_type": 3}}, {"pk": 10, "model": "auth.permission", "fields": {"codename": "add_contenttype", "name": "Can add content type", "content_type": 4}}, {"pk": 11, "model": "auth.permission", "fields": {"codename": "change_contenttype", "name": "Can change content type", "content_type": 4}}, {"pk": 12, "model": "auth.permission", "fields": {"codename": "delete_contenttype", "name": "Can delete content type", "content_type": 4}}, {"pk": 25, "model": "auth.permission", "fields": {"codename": "add_area", "name": "Can add area", "content_type": 9}}, {"pk": 26, "model": "auth.permission", "fields": {"codename": "change_area", "name": "Can change area", "content_type": 9}}, {"pk": 27, "model": "auth.permission", "fields": {"codename": "delete_area", "name": "Can delete area", "content_type": 9}}, {"pk": 28, "model": "auth.permission", "fields": {"codename": "add_convention", "name": "Can add convention", "content_type": 10}}, {"pk": 29, "model": "auth.permission", "fields": {"codename": "change_convention", "name": "Can change convention", "content_type": 10}}, {"pk": 30, "model": "auth.permission", "fields": {"codename": "delete_convention", "name": "Can delete convention", "content_type": 10}}, {"pk": 31, "model": "auth.permission", "fields": {"codename": "add_event", "name": "Can add event", "content_type": 11}}, {"pk": 32, "model": "auth.permission", "fields": {"codename": "change_event", "name": "Can change event", "content_type": 11}}, {"pk": 33, "model": "auth.permission", "fields": {"codename": "delete_event", "name": "Can delete event", "content_type": 11}}, {"pk": 22, "model": "auth.permission", "fields": {"codename": "add_location", "name": "Can add location", "content_type": 8}}, {"pk": 23, "model": "auth.permission", "fields": {"codename": "change_location", "name": "Can change location", "content_type": 8}}, {"pk": 24, "model": "auth.permission", "fields": {"codename": "delete_location", "name": "Can delete location", "content_type": 8}}, {"pk": 34, "model": "auth.permission", "fields": {"codename": "add_newsitem", "name": "Can add news item", "content_type": 12}}, {"pk": 35, "model": "auth.permission", "fields": {"codename": "change_newsitem", "name": "Can change news item", "content_type": 12}}, {"pk": 36, "model": "auth.permission", "fields": {"codename": "delete_newsitem", "name": "Can delete news item", "content_type": 12}}, {"pk": 13, "model": "auth.permission", "fields": {"codename": "add_session", "name": "Can add session", "content_type": 5}}, {"pk": 14, "model": "auth.permission", "fields": {"codename": "change_session", "name": "Can change session", "content_type": 5}}, {"pk": 15, "model": "auth.permission", "fields": {"codename": "delete_session", "name": "Can delete session", "content_type": 5}}, {"pk": 16, "model": "auth.permission", "fields": {"codename": "add_site", "name": "Can add site", "content_type": 6}}, {"pk": 17, "model": "auth.permission", "fields": {"codename": "change_site", "name": "Can change site", "content_type": 6}}, {"pk": 18, "model": "auth.permission", "fields": {"codename": "delete_site", "name": "Can delete site", "content_type": 6}}, {"pk": 1, "model": "auth.user", "fields": {"username": "k4emic", "first_name": "", "last_name": "", "is_active": true, "is_superuser": true, "is_staff": true, "last_login": "2012-12-13T15:18:41Z", "groups": [], "user_permissions": [], "password": "pbkdf2_sha256$10000$qOBBCCq00rhd$EB/oZ/U+9TcjFGxKFM6fiJaX4TxIMLgDcTeN3fLselI=", "email": "k4emic@gmail.com", "date_joined": "2012-12-12T14:58:23Z"}}, {"pk": 5, "model": "admin.logentry", "fields": {"action_flag": 1, "action_time": "2012-12-13T15:40:37Z", "object_repr": "Cosplayhallen", "object_id": "3", "change_message": "", "user": 1, "content_type": 9}}, {"pk": 4, "model": "admin.logentry", "fields": {"action_flag": 1, "action_time": "2012-12-13T15:40:30Z", "object_repr": "Eventsalen", "object_id": "2", "change_message": "", "user": 1, "content_type": 9}}, {"pk": 3, "model": "admin.logentry", "fields": {"action_flag": 1, "action_time": "2012-12-13T15:40:14Z", "object_repr": "Multihallen", "object_id": "1", "change_message": "", "user": 1, "content_type": 9}}, {"pk": 2, "model": "admin.logentry", "fields": {"action_flag": 1, "action_time": "2012-12-13T15:19:26Z", "object_repr": "SVScon 2013", "object_id": "1", "change_message": "", "user": 1, "content_type": 10}}, {"pk": 1, "model": "admin.logentry", "fields": {"action_flag": 1, "action_time": "2012-12-13T15:19:19Z", "object_repr": "Herning sportscenter", "object_id": "1", "change_message": "", "user": 1, "content_type": 8}}]
+[
+    {
+        "pk": 9,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "area",
+            "name": "area",
+            "app_label": "service"
+        }
+    }, {
+        "pk": 4,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "contenttype",
+            "name": "content type",
+            "app_label": "contenttypes"
+        }
+    }, {
+        "pk": 10,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "convention",
+            "name": "convention",
+            "app_label": "service"
+        }
+    }, {
+        "pk": 11,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "event",
+            "name": "event",
+            "app_label": "service"
+        }
+    }, {
+        "pk": 2,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "group",
+            "name": "group",
+            "app_label": "auth"
+        }
+    }, {
+        "pk": 8,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "location",
+            "name": "location",
+            "app_label": "service"
+        }
+    }, {
+        "pk": 7,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "logentry",
+            "name": "log entry",
+            "app_label": "admin"
+        }
+    }, {
+        "pk": 12,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "newsitem",
+            "name": "news item",
+            "app_label": "service"
+        }
+    }, {
+        "pk": 1,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "permission",
+            "name": "permission",
+            "app_label": "auth"
+        }
+    }, {
+        "pk": 5,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "session",
+            "name": "session",
+            "app_label": "sessions"
+        }
+    }, {
+        "pk": 6,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "site",
+            "name": "site",
+            "app_label": "sites"
+        }
+    }, {
+        "pk": 3,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "user",
+            "name": "user",
+            "app_label": "auth"
+        }
+    }, {
+        "pk": "5c59b123e9c0ecf7b3805e87097923ad",
+        "model": "sessions.session",
+        "fields": {
+            "expire_date": "2012-12-27T15:18:41Z",
+            "session_data": "MWQ2YTQ0ZjM3YmQyYjY0ZGMzYWE2MDJmOWY0OTQ0MjMzMTJhOTRlMjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQF1Lg==\n"
+        }
+    }, {
+        "pk": 1,
+        "model": "sites.site",
+        "fields": {
+            "domain": "example.com",
+            "name": "example.com"
+        }
+    }, {
+        "pk": 1,
+        "model": "service.location",
+        "fields": {
+            "name": "Herning sportscenter"
+        }
+    }, {
+        "pk": 1,
+        "model": "service.area",
+        "fields": {
+            "name": "Multihallen",
+            "location": 1
+        }
+    }, {
+        "pk": 2,
+        "model": "service.area",
+        "fields": {
+            "name": "Eventrum 1",
+            "location": 1
+        }
+    }, {
+        "pk": 3,
+        "model": "service.area",
+        "fields": {
+            "name": "Eventrum 2",
+            "location": 1
+        }
+    }, {
+        "pk": 4,
+        "model": "service.area",
+        "fields": {
+            "name": "Eventsalen",
+            "location": 1
+        }
+    }, {
+        "pk": 5,
+        "model": "service.area",
+        "fields": {
+            "name": "Cosplay hallen",
+            "location": 1
+        }
+    }, {
+        "pk": 6,
+        "model": "service.area",
+        "fields": {
+            "name": "Fan event omr\u00e5det",
+            "location": 1
+        }
+    }, {
+        "pk": 1,
+        "model": "service.convention",
+        "fields": {
+            "start_time": "2012-05-11T18:00:00Z",
+            "location": 1,
+            "name": "SVScon 2012",
+            "end_time": "2012-05-13T15:00:00Z"
+        }
+    }, {
+        "pk": 1,
+        "model": "service.event",
+        "fields": {
+            "name": "Velkomst",
+            "area": 1,
+            "start_time": "2012-05-11T19:00:00Z",
+            "end_time": "2012-05-11T19:30:00Z",
+            "convention": 1,
+            "description": "SVScon byder deltagerne velkommen og kommer med generel og nyttig information."
+        }
+    }, {
+        "pk": 2,
+        "model": "service.event",
+        "fields": {
+            "name": "Auktion",
+            "area": 1,
+            "start_time": "2012-05-11T21:30:00Z",
+            "end_time": "2012-05-12T01:30:00Z",
+            "convention": 1,
+            "description": ""
+        }
+    }, {
+        "pk": 3,
+        "model": "service.event",
+        "fields": {
+            "name": "Orienteringsl\u00f8b",
+            "area": 2,
+            "start_time": "2012-05-11T21:30:00Z",
+            "end_time": "2012-05-11T22:30:00Z",
+            "convention": 1,
+            "description": "I orienteringsl\u00f8bet f\u00e5r du mulighed for at blive bedre til at finde rundt p\u00e5 connen samtidig med at du l\u00f8se forskellige opgaver ved 5 poster. Du vil komme p\u00e5 hold med 4 andre personer. Ved hver post vil I f\u00e5 stillet en udfordring, og s\u00e5 vil I f\u00e5 point alt efter, hvor godt I l\u00f8ser den. "
+        }
+    }, {
+        "pk": 4,
+        "model": "service.event",
+        "fields": {
+            "name": "Musikquiz",
+            "area": 2,
+            "start_time": "2012-05-11T23:00:00Z",
+            "end_time": "2012-05-11T23:40:00Z",
+            "convention": 1,
+            "description": "Kom og afpr\u00f8v dit kendskab til anime openings og endings. Der bliver spillet et klip fra en sang, og s\u00e5 g\u00e6lder det om at trykke sig ind, hvis man ved hvilken anime det er fra. De fleste sange bliver afspillet normalt, men enkelte afspilles med h\u00f8jere hastighed end normalt for at give lidt ekstra udfordring. "
+        }
+    }, {
+        "pk": 5,
+        "model": "service.event",
+        "fields": {
+            "name": "Biografen \u00e5bner",
+            "area": 3,
+            "start_time": "2012-05-11T23:00:00Z",
+            "end_time": "2012-05-12T03:00:00Z",
+            "convention": 1,
+            "description": ""
+        }
+    }, {
+        "pk": 6,
+        "model": "service.event",
+        "fields": {
+            "name": "G\u00e6t et klip",
+            "area": 1,
+            "start_time": "2012-05-12T10:00:00Z",
+            "end_time": "2012-05-12T11:00:00Z",
+            "convention": 1,
+            "description": "Har du et godt \u00f8je, n\u00e5r det kommer til anime og har du let ved at genkende scener, s\u00e5 er denne quiz lige noget for dig. Der vil blive spillet en r\u00e6kke klip uden lyd, og s\u00e5 skal man g\u00e6tte, hvilke anime klippene er fra."
+        }
+    }, {
+        "pk": 7,
+        "model": "service.event",
+        "fields": {
+            "name": "In-character Hetalia panel",
+            "area": 2,
+            "start_time": "2012-05-12T10:00:00Z",
+            "end_time": "2012-05-12T11:30:00Z",
+            "convention": 1,
+            "description": "Hetalia panelet foreg\u00e5r in-character og handler s\u00e5 at sige om, at de 8 lande der har stillet sig til r\u00e5dighed vil v\u00e6re in-character fra start til slut p\u00e5 panelet. Under panelet vil man blive indbudt til en verdenskonference, hvor det denne gang ikke bare handler om landene der sidder og snakker, men nu kan publikum ogs\u00e5 stille sp\u00f8rgsm\u00e5l og f\u00e5 svar.\nDer vil evt. ske sm\u00e5 handlingsforl\u00f8b, s\u00e5som at et panelmedlem kommer for sent og s\u00e5 vil der blive bygget lidt historie p\u00e5 det, s\u00e5 det ikke bliver for t\u00f8rt at stille sp\u00f8rgsm\u00e5l hele tiden. (-s\u00e5 der er ogs\u00e5 en anelse act over eventet)"
+        }
+    }, {
+        "pk": 8,
+        "model": "service.event",
+        "fields": {
+            "name": "Holdquiz",
+            "area": 1,
+            "start_time": "2012-05-12T11:00:00Z",
+            "end_time": "2012-05-12T13:00:00Z",
+            "convention": 1,
+            "description": "Hvis du har et bredt kendskab til anime og manga, er denne quiz lige noget for dig \u2013 og selv hvis du ikke har, kan du komme p\u00e5 hold med nogle der har. 10 hold med 5 personer p\u00e5 hvert dyster imod hinanden i forskellige kategorier, som b\u00e5de indeholder almindelig tekstsp\u00f8rgsm\u00e5l men ogs\u00e5 billeder og meget mere."
+        }
+    }, {
+        "pk": 9,
+        "model": "service.event",
+        "fields": {
+            "name": "Spilquiz",
+            "area": 1,
+            "start_time": "2012-05-12T13:00:00Z",
+            "end_time": "2012-05-12T14:20:00Z",
+            "convention": 1,
+            "description": "Der quizzes om spilviden, og endnu engang k\u00f8rer vi p\u00e5 et eksperimenterende stadie, hvor vi h\u00e5ber at vi har forbedret os siden sidste \u00e5r. Vi har nye kategorier, som eksempelvis \u201dg\u00e6t karakteren p\u00e5 billedet\u201d. Holdene tr\u00e6kkes tilf\u00e6ldigt, og vi lukker folk ind, indtil vi f\u00f8ler at vi har n\u00e5et maximum for hvad der b\u00f8r deltage."
+        }
+    }, {
+        "pk": 10,
+        "model": "service.event",
+        "fields": {
+            "name": "Chopstick Champion",
+            "area": 1,
+            "start_time": "2012-05-12T15:00:00Z",
+            "end_time": "2012-05-12T16:30:00Z",
+            "convention": 1,
+            "description": "Flyt ting med spisepinde og bliv den ultimative chopstick champion!"
+        }
+    }, {
+        "pk": 11,
+        "model": "service.event",
+        "fields": {
+            "name": "Tegn og G\u00e6t",
+            "area": 1,
+            "start_time": "2012-05-12T17:00:00Z",
+            "end_time": "2012-05-12T18:30:00Z",
+            "convention": 1,
+            "description": "Tegn og g\u00e6t p\u00e5 storsk\u00e6rm. Det g\u00e6lder om at tegne titler eller figurer fra anime og manga, og s\u00e5 skal publikum g\u00e6tte, hvad man tegner. "
+        }
+    }, {
+        "pk": 12,
+        "model": "service.event",
+        "fields": {
+            "name": "Mafia",
+            "area": 1,
+            "start_time": "2012-05-13T00:00:00Z",
+            "end_time": "2012-05-13T04:00:00Z",
+            "convention": 1,
+            "description": "Mafia er en form for rollespil, meget ligesom Werewolves, det spilles bare p\u00e5 en lidt anden m\u00e5de med meget mere snak. I Mafia f\u00e5r du uddelt en rolle, enten kan du v\u00e6re mafia eller du kan v\u00e6re et medlem af byen. Det g\u00e6lder s\u00e5 om for de 2 grupper at sl\u00e5 hinanden ihjel (man sidder p\u00e5 en stol og f\u00e5r afvide hvis man d\u00f8r, intet farligt her). Byen som mafiaen er en del af h\u00e6nger en person om dagen, som kan v\u00e6re mafia, mens mafiaen v\u00e5gner op om natten og v\u00e6lger hvem de vil skyde den nat. Der er selvf\u00f8lgelig mange flere roller, alt vil blive forklaret for folk der ikke har spillet det f\u00f8r, og spillet er virkelig nemt og sjovt. "
+        }
+    }, {
+        "pk": 13,
+        "model": "service.event",
+        "fields": {
+            "name": "Hit med Anime\u2019en!",
+            "area": 2,
+            "start_time": "2012-05-12T12:00:00Z",
+            "end_time": "2012-05-12T13:00:00Z",
+            "convention": 1,
+            "description": "Vi kender alle sammen \u2019Hit med Sangen\u2019 hvor folkene p\u00e5 hvert hold skal g\u00e6tte hvilken sang der bliver talt om/spillet. Det har vi nu ogs\u00e5 f\u00e5et i anime form! Her g\u00e6lder det om for deltageren at synge med p\u00e5 en karaoke video som kun han/hun ser, og de resterende deltagere skal derefter g\u00e6tte hvilken anime serie sangen er fra. Det er tilladt at nynne hvis man har problemer med udtalelse af det japanske sprog. Det er en fordel at kende mange sange p\u00e5 tv\u00e6rs af genrerne, men intet krav :) God forn\u00f8jelse!"
+        }
+    }, {
+        "pk": 14,
+        "model": "service.event",
+        "fields": {
+            "name": "Werewolves",
+            "area": 1,
+            "start_time": "2012-05-12T01:00:00Z",
+            "end_time": "2012-05-12T03:00:00Z",
+            "convention": 1,
+            "description": ""
+        }
+    }, {
+        "pk": 15,
+        "model": "service.event",
+        "fields": {
+            "name": "Panel: Det danske fanmilj\u00f8",
+            "area": 2,
+            "start_time": "2012-05-12T13:00:00Z",
+            "end_time": "2012-05-12T14:30:00Z",
+            "convention": 1,
+            "description": "I dette panel kan du m\u00f8de personer fra forskellige initiativer i det danske fanmilj\u00f8. De vil snakke om forskellige emner, og der vil ogs\u00e5 v\u00e6re mulighed for at stille sp\u00f8rgsm\u00e5l til dem. Der vil v\u00e6re repr\u00e6sentanter fra f\u00f8lgende initiativer: Herning Anime Forening (HAF), SVScon, Genki, Anime Kita, K\u00f8benhavn\u2019s Anime Forening (KAF), J-Popcon og AniManga."
+        }
+    }, {
+        "pk": 16,
+        "model": "service.event",
+        "fields": {
+            "name": "Turen g\u00e5r til japan",
+            "area": 2,
+            "start_time": "2012-05-12T14:30:00Z",
+            "end_time": "2012-05-12T15:30:00Z",
+            "convention": 1,
+            "description": "Foredrag om, hvordan det er at rejse i Japan og hvad man skal huske f\u00f8r og under rejsen. Der vil blive taget udgangspunkt i byerne Tokyo, Kyoto, Osaka, Takayama og Hiroshima."
+        }
+    }, {
+        "pk": 17,
+        "model": "service.event",
+        "fields": {
+            "name": "Surprise konsolkonkurrence",
+            "area": 2,
+            "start_time": "2012-05-12T16:00:00Z",
+            "end_time": "2012-05-12T16:30:00Z",
+            "convention": 1,
+            "description": "Der dystes i forskellige konsolspil. Hvilke spil det er tilf\u00e6ldigt og hemmeligt indtil tidspunktet hvor konkurrencen g\u00e5r i gang. Det er ikke nok kun at v\u00e6re mester i kampsports spil eller shooters for eksempel. Alle skillz skal p\u00e5 banen her!"
+        }
+    }, {
+        "pk": 18,
+        "model": "service.event",
+        "fields": {
+            "name": "Speed-meeting",
+            "area": 3,
+            "start_time": "2012-05-12T09:30:00Z",
+            "end_time": "2012-05-12T11:00:00Z",
+            "convention": 1,
+            "description": "Navnet siger vel meget sig selv, speed-meeting. Det g\u00e5r ud p\u00e5 at folk hurtigt kan pr\u00f8ve at skabe nye kontakter."
+        }
+    }, {
+        "pk": 19,
+        "model": "service.event",
+        "fields": {
+            "name": "Yugioh turnering",
+            "area": 3,
+            "start_time": "2012-05-12T11:30:00Z",
+            "end_time": "2012-05-12T16:30:00Z",
+            "convention": 1,
+            "description": "Er du ogs\u00e5 facineret af Yugioh? Har du et deck der opfylder TCG limited and forbidden listen der findes her http://www.yugioh-card.com/uk/limited/, s\u00e5 det nu du skal v\u00e6re med til SVScons Yugioh turnering, fyldt med kampe for at blive den bedste! Alt det kr\u00e6ver, er bare at du har dine egne kort med og er klar til at k\u00e6mpe mod andre i vores turnering, og selvf\u00f8lgelig skal vores vores vindere da ikke g\u00e5 tomh\u00e6ndet hjem, nej vores bedste spillere f\u00e5r da nogle pr\u00e6mier! Find ud af hvad til eventet! It\u2019s time to duel!"
+        }
+    }, {
+        "pk": 20,
+        "model": "service.event",
+        "fields": {
+            "name": "DKos panel",
+            "area": 3,
+            "start_time": "2012-05-12T16:00:00Z",
+            "end_time": "2012-05-12T17:30:00Z",
+            "convention": 1,
+            "description": "DKos er Danmarks nye cosplay magasine med fokus p\u00e5 cosplay i alle former. Kom forbi panelet og deltag i en debat hvor din mening betyder noget. For nye som gamle!"
+        }
+    }, {
+        "pk": 21,
+        "model": "service.event",
+        "fields": {
+            "name": "Biografen \u00e5bner",
+            "area": 3,
+            "start_time": "2012-05-12T23:00:00Z",
+            "end_time": "2012-05-13T03:00:00Z",
+            "convention": 1,
+            "description": ""
+        }
+    }, {
+        "pk": 22,
+        "model": "service.event",
+        "fields": {
+            "name": "Lolita loppemarked",
+            "area": 4,
+            "start_time": "2012-05-12T12:30:00Z",
+            "end_time": "2012-05-12T14:30:00Z",
+            "convention": 1,
+            "description": "Lolita loppemarkedet vil v\u00e6re din chance for enten at komme af med noget J-fasion t\u00f8j du ikke bruger l\u00e6ngere, eller at udvide din garderobe med l\u00e6kre genbrugs fund! Om du er ny eller gammel i stilen betyder ikke det store! Sl\u00e5 et smut forbi og se om du kan g\u00f8re et kup, enten som s\u00e6lger eller k\u00f8ber!"
+        }
+    }, {
+        "pk": 23,
+        "model": "service.event",
+        "fields": {
+            "name": "Go fetch",
+            "area": 4,
+            "start_time": "2012-05-12T14:30:00Z",
+            "end_time": "2012-05-12T15:30:00Z",
+            "convention": 1,
+            "description": "Kan du t\u00e6nke hurtigt og kreativt? Go fetch handler om at finde ting rundt omkring p\u00e5 connen p\u00e5 tid. Den person, der f\u00f8rst kommer tilbage med det rigtige, scorer et point til sit hold. "
+        }
+    }, {
+        "pk": 24,
+        "model": "service.event",
+        "fields": {
+            "name": "Plushie rageri",
+            "area": 4,
+            "start_time": "2012-05-12T16:00:00Z",
+            "end_time": "2012-05-12T17:00:00Z",
+            "convention": 1,
+            "description": "Find en plushie med bind for \u00f8jnene"
+        }
+    }, {
+        "pk": 25,
+        "model": "service.event",
+        "fields": {
+            "name": "Style pose off",
+            "area": 4,
+            "start_time": "2012-05-12T17:00:00Z",
+            "end_time": "2012-05-12T18:30:00Z",
+            "convention": 1,
+            "description": "Vi tager pose off et skridt videre, og lader deltagerne v\u00e6re kreative. Frem for bare at efterligne en pose g\u00e6lder det om at finde p\u00e5 en pose, der passer til det ord, man f\u00e5r udleveret."
+        }
+    }, {
+        "pk": 26,
+        "model": "service.event",
+        "fields": {
+            "name": "Quizl\u00f8b",
+            "area": 1,
+            "start_time": "2012-05-13T10:00:00Z",
+            "end_time": "2012-05-13T12:00:00Z",
+            "convention": 1,
+            "description": "Dette er en quiz for dem der kan t\u00e6nke hurtigt og er rappe p\u00e5 f\u00f8dderne. Man dyster imod andre hold i forskellige kategorier som G\u00e6t en tegning, Billedzoom og G\u00e6t titlen. En udvalgt person fra holdet l\u00f8ber ind til midten og svarer. Det hold der f\u00f8rst finder det rigtige svar, og n\u00e5r ind til midten f\u00f8rst scorer point.  Alle personer p\u00e5 holdet, kommer til at l\u00f8be. "
+        }
+    }, {
+        "pk": 27,
+        "model": "service.event",
+        "fields": {
+            "name": "Hobo Cosplay",
+            "area": 1,
+            "start_time": "2012-05-13T12:00:00Z",
+            "end_time": "2012-05-13T13:00:00Z",
+            "convention": 1,
+            "description": "Cosplay like a hobo! Konkurrer med andre hobo's om at lave det bedste cosplay p\u00e5 tid!"
+        }
+    }, {
+        "pk": 28,
+        "model": "service.event",
+        "fields": {
+            "name": "Last man standing",
+            "area": 1,
+            "start_time": "2012-05-13T13:00:00Z",
+            "end_time": "2012-05-13T14:00:00Z",
+            "convention": 1,
+            "description": "I last man standing er det hver mand og kvinde for sig selv, n\u00e5r deltagerne skal v\u00e6lge det rigtige svar ud af tre mulige for ikke at blive elimineret fra runden. Deltageren der st\u00e5r alene tilbage er last man standing. Quizzen afholdes i flere runder med pr\u00e6mie til de begavede og/eller heldige vindere."
+        }
+    }, {
+        "pk": 29,
+        "model": "service.event",
+        "fields": {
+            "name": "Last man standing hardcore edition",
+            "area": 1,
+            "start_time": "2012-05-13T14:00:00Z",
+            "end_time": "2012-05-13T14:20:00Z",
+            "convention": 1,
+            "description": "Er du h\u00e5rd nok til at svare p\u00e5 alle sp\u00f8rgsm\u00e5lene i den sv\u00e6re udgaver af Last Man Standing? Sp\u00f8rgsm\u00e5lene er betydeligt sv\u00e6rere i denne udgave og der udpeges kun en vinder."
+        }
+    }, {
+        "pk": 30,
+        "model": "service.event",
+        "fields": {
+            "name": "Afslutningsceremoni",
+            "area": 1,
+            "start_time": "2012-05-13T14:30:00Z",
+            "end_time": "2012-05-13T14:50:00Z",
+            "convention": 1,
+            "description": "Afrunding p\u00e5 connen, hvor de sidste pr\u00e6mier ogs\u00e5 deles ud."
+        }
+    }, {
+        "pk": 31,
+        "model": "service.event",
+        "fields": {
+            "name": "EuroCosplay foredrag",
+            "area": 2,
+            "start_time": "2012-05-13T10:00:00Z",
+            "end_time": "2012-05-13T10:50:00Z",
+            "convention": 1,
+            "description": "Kom og m\u00f8d SVScons repr\u00e6sentant til EuroCosplay fra 2011. H\u00f8r om hendes tur til London Expo og hvordan det var at deltage i EuroCosplay."
+        }
+    }, {
+        "pk": 32,
+        "model": "service.event",
+        "fields": {
+            "name": "Timeline Quiz",
+            "area": 2,
+            "start_time": "2012-05-13T11:00:00Z",
+            "end_time": "2012-05-13T12:00:00Z",
+            "convention": 1,
+            "description": "Vi har samlet en masse klassikere lige fra den sp\u00e6de start af anime og indtil de sidste nye hits. S\u00e5 er du god til at huske serie og hvorn\u00e5r de udkom i Japan, s\u00e5 er dette lige en quiz for dig. "
+        }
+    }, {
+        "pk": 33,
+        "model": "service.event",
+        "fields": {
+            "name": "Konsolkonkurrence",
+            "area": 2,
+            "start_time": "2012-05-13T12:00:00Z",
+            "end_time": "2012-05-13T13:30:00Z",
+            "convention": 1,
+            "description": ""
+        }
+    }, {
+        "pk": 34,
+        "model": "service.event",
+        "fields": {
+            "name": "SVScons fremtid",
+            "area": 2,
+            "start_time": "2012-05-13T13:30:00Z",
+            "end_time": "2012-05-13T14:30:00Z",
+            "convention": 1,
+            "description": "Her f\u00e5r du mulighed for at f\u00e5 indflydelse p\u00e5 SVScons fremtid. Har du forslag til ting der skal \u00e6ndres eller tilf\u00f8jes? Synes du noget er godt og ikke skal \u00e6ndres? S\u00e5 er dette panelet, hvor du kan udtrykke dig. Dette panel burde blive meget interessant og relevant i \u00e5r, da der grundet J-Popcons flytning til februar vil v\u00e6re nogle ekstra overvejelser, der skal g\u00f8res."
+        }
+    }, {
+        "pk": 35,
+        "model": "service.event",
+        "fields": {
+            "name": "Kanji workshop",
+            "area": 3,
+            "start_time": "2012-05-13T10:00:00Z",
+            "end_time": "2012-05-13T11:00:00Z",
+            "convention": 1,
+            "description": "En workshop hvor deltagerne kan l\u00e6re at tegne kanji (japanske skrifttegn). De grundl\u00e6ggende kanji vil blive vist og \u00f8vet, men der kan ogs\u00e5 tegnes kanji efter forslag."
+        }
+    }, {
+        "pk": 36,
+        "model": "service.event",
+        "fields": {
+            "name": "Tanto Cuore turnering",
+            "area": 3,
+            "start_time": "2012-05-13T11:00:00Z",
+            "end_time": "2012-05-13T14:30:00Z",
+            "convention": 1,
+            "description": ""
+        }
+    }, {
+        "pk": 19,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_logentry",
+            "name": "Can add log entry",
+            "content_type": 7
+        }
+    }, {
+        "pk": 20,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_logentry",
+            "name": "Can change log entry",
+            "content_type": 7
+        }
+    }, {
+        "pk": 21,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_logentry",
+            "name": "Can delete log entry",
+            "content_type": 7
+        }
+    }, {
+        "pk": 4,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_group",
+            "name": "Can add group",
+            "content_type": 2
+        }
+    }, {
+        "pk": 5,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_group",
+            "name": "Can change group",
+            "content_type": 2
+        }
+    }, {
+        "pk": 6,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_group",
+            "name": "Can delete group",
+            "content_type": 2
+        }
+    }, {
+        "pk": 1,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_permission",
+            "name": "Can add permission",
+            "content_type": 1
+        }
+    }, {
+        "pk": 2,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_permission",
+            "name": "Can change permission",
+            "content_type": 1
+        }
+    }, {
+        "pk": 3,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_permission",
+            "name": "Can delete permission",
+            "content_type": 1
+        }
+    }, {
+        "pk": 7,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_user",
+            "name": "Can add user",
+            "content_type": 3
+        }
+    }, {
+        "pk": 8,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_user",
+            "name": "Can change user",
+            "content_type": 3
+        }
+    }, {
+        "pk": 9,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_user",
+            "name": "Can delete user",
+            "content_type": 3
+        }
+    }, {
+        "pk": 10,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_contenttype",
+            "name": "Can add content type",
+            "content_type": 4
+        }
+    }, {
+        "pk": 11,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_contenttype",
+            "name": "Can change content type",
+            "content_type": 4
+        }
+    }, {
+        "pk": 12,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_contenttype",
+            "name": "Can delete content type",
+            "content_type": 4
+        }
+    }, {
+        "pk": 25,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_area",
+            "name": "Can add area",
+            "content_type": 9
+        }
+    }, {
+        "pk": 26,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_area",
+            "name": "Can change area",
+            "content_type": 9
+        }
+    }, {
+        "pk": 27,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_area",
+            "name": "Can delete area",
+            "content_type": 9
+        }
+    }, {
+        "pk": 28,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_convention",
+            "name": "Can add convention",
+            "content_type": 10
+        }
+    }, {
+        "pk": 29,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_convention",
+            "name": "Can change convention",
+            "content_type": 10
+        }
+    }, {
+        "pk": 30,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_convention",
+            "name": "Can delete convention",
+            "content_type": 10
+        }
+    }, {
+        "pk": 31,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_event",
+            "name": "Can add event",
+            "content_type": 11
+        }
+    }, {
+        "pk": 32,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_event",
+            "name": "Can change event",
+            "content_type": 11
+        }
+    }, {
+        "pk": 33,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_event",
+            "name": "Can delete event",
+            "content_type": 11
+        }
+    }, {
+        "pk": 22,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_location",
+            "name": "Can add location",
+            "content_type": 8
+        }
+    }, {
+        "pk": 23,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_location",
+            "name": "Can change location",
+            "content_type": 8
+        }
+    }, {
+        "pk": 24,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_location",
+            "name": "Can delete location",
+            "content_type": 8
+        }
+    }, {
+        "pk": 34,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_newsitem",
+            "name": "Can add news item",
+            "content_type": 12
+        }
+    }, {
+        "pk": 35,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_newsitem",
+            "name": "Can change news item",
+            "content_type": 12
+        }
+    }, {
+        "pk": 36,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_newsitem",
+            "name": "Can delete news item",
+            "content_type": 12
+        }
+    }, {
+        "pk": 13,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_session",
+            "name": "Can add session",
+            "content_type": 5
+        }
+    }, {
+        "pk": 14,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_session",
+            "name": "Can change session",
+            "content_type": 5
+        }
+    }, {
+        "pk": 15,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_session",
+            "name": "Can delete session",
+            "content_type": 5
+        }
+    }, {
+        "pk": 16,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_site",
+            "name": "Can add site",
+            "content_type": 6
+        }
+    }, {
+        "pk": 17,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_site",
+            "name": "Can change site",
+            "content_type": 6
+        }
+    }, {
+        "pk": 18,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_site",
+            "name": "Can delete site",
+            "content_type": 6
+        }
+    }, {
+        "pk": 1,
+        "model": "auth.user",
+        "fields": {
+            "username": "k4emic",
+            "first_name": "",
+            "last_name": "",
+            "is_active": true,
+            "is_superuser": true,
+            "is_staff": true,
+            "last_login": "2012-12-13T15:18:41Z",
+            "groups": [],
+            "user_permissions": [],
+            "password": "pbkdf2_sha256$10000$qOBBCCq00rhd$EB/oZ/U+9TcjFGxKFM6fiJaX4TxIMLgDcTeN3fLselI=",
+            "email": "k4emic@gmail.com",
+            "date_joined": "2012-12-12T14:58:23Z"
+        }
+    }, {
+        "pk": 5,
+        "model": "admin.logentry",
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2012-12-13T15:40:37Z",
+            "object_repr": "Cosplayhallen",
+            "object_id": "3",
+            "change_message": "",
+            "user": 1,
+            "content_type": 9
+        }
+    }, {
+        "pk": 4,
+        "model": "admin.logentry",
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2012-12-13T15:40:30Z",
+            "object_repr": "Eventsalen",
+            "object_id": "2",
+            "change_message": "",
+            "user": 1,
+            "content_type": 9
+        }
+    }, {
+        "pk": 3,
+        "model": "admin.logentry",
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2012-12-13T15:40:14Z",
+            "object_repr": "Multihallen",
+            "object_id": "1",
+            "change_message": "",
+            "user": 1,
+            "content_type": 9
+        }
+    }, {
+        "pk": 2,
+        "model": "admin.logentry",
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2012-12-13T15:19:26Z",
+            "object_repr": "SVScon 2013",
+            "object_id": "1",
+            "change_message": "",
+            "user": 1,
+            "content_type": 10
+        }
+    }, {
+        "pk": 1,
+        "model": "admin.logentry",
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2012-12-13T15:19:19Z",
+            "object_repr": "Herning sportscenter",
+            "object_id": "1",
+            "change_message": "",
+            "user": 1,
+            "content_type": 8
+        }
+    }
+]
