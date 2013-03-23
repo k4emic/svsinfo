@@ -1,0 +1,72 @@
+@import "bootstrap.less";
+@import "grid.less";
+
+
+body > .container {
+  
+    #top {
+    
+    .row;
+    
+    #top-image {
+        .makeColumn(4);
+        width:266px;
+    }
+    
+    #top-title {
+        .makeColumn(8);
+        line-height:300px;
+        margin: 0 0 0 40px;
+    }
+    
+  }
+}
+
+#index-container {
+    .row;
+    
+    .events-list {
+        .makeColumn(10);
+        margin-left: 0;
+        list-style:none;
+        
+        .event-item {
+            
+            border-bottom: 1px dotted #dedede;
+            .row();
+            .makeColumn(10);
+            margin: 5px 0;
+            cursor:pointer;
+            
+            .event-time {
+                .makeColumn(1);
+                margin-left: 0;
+                height:100%;
+            }
+            
+            .event-name {
+                .makeColumn(7);
+                line-height:40px;
+                font-weight:bold;
+                font-size:130%;
+            }
+            
+            .event-area {
+                .makeColumn(2);
+                line-height:40px;
+                text-align:justify;
+            }
+            
+            .event-description {
+                .makeColumn(9);
+                display:none;
+                margin-top:10px;
+            }
+        }
+    }
+    
+    .news-list{
+        .makeColumn(2);
+    }
+}
+

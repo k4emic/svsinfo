@@ -1,23 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-    {{ convention.name }}
-    
-    <ol>
-    {% for event in past_events %}
-        <li>{{ event.name }}</li>
-    {% endfor %}
-    
-        <li>end of past</li>
-    
-    {% for event in current_events %}
-        <li>{{ event.name }}</li>
-    {% endfor %}
-    
-        <li>end of current</li>
-    {% for event in future_events %}
-        <li>{{ event.name }}</li>
-    {% endfor %}
-    
+<div id="index-container">
+
+    <ol class="events-list">
+        {% for event in past_events %}
+            {% include "event-item.html" %}
+        {% endfor %}
     </ol>
-{% endblock %}
+
+
+    <ul class="news-list">
+        {% for news in news_items %}
+        <li>
+            {{news.title}}
+        </li>
+        {% endfor %}
+    </ul>
+
+
+</div> {% endblock %} 

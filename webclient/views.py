@@ -6,8 +6,9 @@ import django.utils.timezone
 # Create your views here.
 def index(request):
     # get current con
-    con = models.Convention.objects.latest('start_time')
-    events = con.event_set.order_by('start_time').all()
+    con = models.Convention.current()
+    events = con.event_set.order_by('start_time').select_related('news_item', 'area').all()
+    news_items = con.newsitem_set.all()
     
     current_events = []
     future_events = []
@@ -27,7 +28,9 @@ def index(request):
         'convention': con,
         'current_events': current_events,
         'future_events': future_events,
-        'past_events': past_events
+        'past_events': past_events,
+        'news_items': news_items
         
     }
+    
     return render_to_response('index.html', context, RequestContext(request))

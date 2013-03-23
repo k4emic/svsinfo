@@ -1,0 +1,9 @@
+<li class="event-item">
+    <div class="event-time">
+        <span class="start-time">{{ event.start_time|date:"H:i" }}</span>
+        <span class="start-time">{{ event.end_time|date:"H:i" }}</span>
+    </div>
+    <div class="event-name">{{ event.name }}</div>
+    <div class="event-area">{{ event.area.name }}</div>
+    <p class="event-description">{{ event.description }}</p>
+</li>
