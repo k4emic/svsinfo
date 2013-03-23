@@ -19,6 +19,13 @@ class Convention(models.Model):
     end_time = models.DateTimeField()
     location = models.ForeignKey(Location)
     
+    @classmethod
+    def current(cls):
+        return cls.objects.all().latest()
+    
+    class Meta:
+        get_latest_by = 'start_time'
+    
     def __unicode__(self):
         return self.name
 
@@ -47,4 +54,7 @@ class NewsItem(models.Model):
     
     def __unicode__(self):
         return self.title
+    
+    class Meta:
+        ordering = ('-time',)
     
