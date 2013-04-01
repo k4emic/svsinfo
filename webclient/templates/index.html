@@ -2,6 +2,8 @@
 
 {% block content %}
 <div id="index-container">
+    
+    {% include "daytabs.html" %}
 
     <ol class="events-list">
         {% for event in past_events %}

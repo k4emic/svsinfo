@@ -1,0 +1,10 @@
+{% load l10n %}
+<ul class="nav nav-pills">
+    {% for i, weekday in weekdays.items %}
+        {% if i == active_weekday %}
+        <li class="active"><a href="?day={{ i }}">{{weekday}}</a></li>
+        {% else %}
+        <li><a href="?day={{ i }}">{{weekday}}</a></li>
+        {% endif %}
+    {% endfor %}
+</ul>
