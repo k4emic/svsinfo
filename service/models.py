@@ -1,4 +1,5 @@
 from django.db import models
+import datetime
 
 class Location(models.Model):
     name = models.CharField(max_length=50)
@@ -19,13 +20,40 @@ class Convention(models.Model):
     end_time = models.DateTimeField()
     location = models.ForeignKey(Location)
     
+    class Meta:
+        get_latest_by = 'start_time'
+    
     @classmethod
     def current(cls):
         return cls.objects.all().latest()
     
-    class Meta:
-        get_latest_by = 'start_time'
+    def dates(self):
+        """
+        Returns a list of all dates inclusive and between the start and end date of this convention
+        """
+        start_date = self.start_time.date()
+        end_date = self.end_time.date()
+        
+        if(start_date > end_date):
+            return []
+        
+        dates = []
+        last_date = start_date
+        
+        while(last_date <= end_date):
+            dates.append(last_date)
+            last_date += datetime.timedelta(days=1)
+            
+        return dates
     
+    def events_on_day(self, isoweekday):
+        """
+        Returns a queryset of events finding place on the specified isoweekday
+        """
+        weekday = isoweekday % 7 + 1
+        events = self.event_set.filter(start_time__week_day=weekday).all()
+        return events
+
     def __unicode__(self):
         return self.name
 
