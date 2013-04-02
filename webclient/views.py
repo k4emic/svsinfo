@@ -17,8 +17,12 @@ def index(request):
     
     # get current con
     con = models.Convention.current()
+    dates = con.dates()
     
-    active_weekday = con.start_time.isoweekday() 
+    for date in dates: # build list of weekdays
+        weekdays[date.isoweekday()] = date.strftime('%A')
+        
+    active_weekday = dates[0].isoweekday() 
     if('day' in request.GET):
         try:
             active_weekday = int(request.GET['day'])
@@ -27,11 +31,7 @@ def index(request):
         
     events = con.events_on_day(active_weekday).select_related('news_item', 'area')
     news_items = con.newsitem_set.all()
-    dates = con.dates()
-    
-    for date in dates:
-        weekdays[date.isoweekday()] = date.strftime('%A')
-    
+
     for event in events:
         if(event.start_time < now and now < event.end_time): # current event
             current_events.append(event)
