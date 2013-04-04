@@ -19,4 +19,27 @@ jQuery(document).ready(function($) {
     $('.news-list > li').click(function() {
         
     });
+    
+    
+    function updateClock() {
+        // show and update clock
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        
+        function formatTime(i) {
+            if(i < 10) {
+                i = "0" + i;
+            }
+            
+            return i;
+        }
+        
+        var timeString = hours + ":" + minutes;
+        console.log(timeString);
+    }
+    
+    updateClock();
+    setInterval(updateClock, 1000);
+    
 });
