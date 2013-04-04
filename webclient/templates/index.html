@@ -5,6 +5,11 @@
     
     {% include "daytabs.html" %}
 
+    <div class="event-list-legend">
+        <span class="legend-time">tid</span>
+        <span class="legend-event">event</span>
+        <span class="legend-area">sted</span>
+    </div>
     <ol class="events-list">
         {% for event in past_events %}
             {% include "event-item.html" %}
