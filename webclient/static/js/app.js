@@ -14,9 +14,4 @@ jQuery(document).ready(function($) {
         }
         
     });
-    
-    
-    $('.news-list > li').click(function() {
-        
-    });
 });
