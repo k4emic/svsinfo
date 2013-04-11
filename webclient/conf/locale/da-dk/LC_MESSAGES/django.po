@@ -1,0 +1,28 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+
+#: templates/index.html:13
+msgid "Time"
+msgstr "Start/Slut"
+
+#: templates/index.html:14
+msgid "Event"
+msgstr "Event"
+
+#: templates/index.html:15
+msgid "Area"
+msgstr "Sted"
+
+msgid "Friday"
+msgstr "Fredag"
+
+msgid "Saturday"
+msgstr "Lørdag"
+
+msgid "Sunday"
+msgstr "Søndag"

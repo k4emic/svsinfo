@@ -1,28 +1,25 @@
 {% extends "base.html" %}
-
+{% load i18n %}
 {% block content %}
 <div id="index-container">
     
     <div id="nav-container">
-        
         <div id="clock">&nbsp;</div>
         
         {% include "daytabs.html" %}
-        
-        
     </div>
     
     <div class="event-list-legend">
-        <span class="legend-time">tid</span>
-        <span class="legend-event">event</span>
-        <span class="legend-area">sted</span>
+        <span class="legend-time">{% trans "Time" %}</span>
+        <span class="legend-event">{% trans "Event" %}</span>
+        <span class="legend-area">{% trans "Area" %}</span>
     </div>
+    
     <ol class="events-list">
         {% for event in past_events %}
             {% include "event-item.html" %}
         {% endfor %}
     </ol>
-
 
     <ul class="news-list">
         {% for news in news_items %}
