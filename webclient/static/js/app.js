@@ -13,8 +13,7 @@ jQuery(document).ready(function($) {
             $desc.slideDown();
         }
         
-    });
-    
+    });    
     
     $('.news-list > li').click(function() {
         
