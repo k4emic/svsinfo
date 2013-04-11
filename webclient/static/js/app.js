@@ -35,7 +35,9 @@ jQuery(document).ready(function($) {
         }
         
         var timeString = hours + ":" + minutes;
-        console.log(timeString);
+        var elm_selector = '#clock';
+        $(elm_selector).html(timeString);
+        //console.log(timeString);
     }
     
     updateClock();

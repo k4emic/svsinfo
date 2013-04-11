@@ -3,8 +3,15 @@
 {% block content %}
 <div id="index-container">
     
-    {% include "daytabs.html" %}
-
+    <div id="nav-container">
+        
+        <div id="clock">&nbsp;</div>
+        
+        {% include "daytabs.html" %}
+        
+        
+    </div>
+    
     <div class="event-list-legend">
         <span class="legend-time">tid</span>
         <span class="legend-event">event</span>
