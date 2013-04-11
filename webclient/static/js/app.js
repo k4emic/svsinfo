@@ -13,18 +13,13 @@ jQuery(document).ready(function($) {
             $desc.slideDown();
         }
         
-    });    
-    
-    $('.news-list > li').click(function() {
-        
     });
-    
     
     function updateClock() {
         // show and update clock
         var now = new Date();
-        var hours = now.getHours();
-        var minutes = now.getMinutes();
+        var hours = formatTime(now.getHours());
+        var minutes = formatTime(now.getMinutes());
         
         function formatTime(i) {
             if(i < 10) {
