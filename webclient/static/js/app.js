@@ -36,6 +36,20 @@ jQuery(document).ready(function($) {
     }
     
     updateClock();
-    setInterval(updateClock, 1000);
     
+    var last_movement = 0;
+    setInterval(idleHandler, 60 * 1000);
+    
+    $(this).mousemove(function(a, b) {
+        last_movement = 0;
+    });
+    
+    function idleHandler() {
+        last_movement++;
+        console.log('time since last movement: ' + last_movement);
+        
+        if(last_movement >= 20) {
+            window.location.reload();
+        }
+    }
 });
