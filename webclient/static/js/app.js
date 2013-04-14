@@ -52,4 +52,8 @@ jQuery(document).ready(function($) {
             window.location.reload();
         }
     }
+    
+    $(this).bind("contextmenu", function(e) {
+        e.preventDefault();
+    });
 });
