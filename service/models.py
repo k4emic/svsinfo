@@ -75,7 +75,7 @@ class Event(models.Model):
 class NewsItem(models.Model):
     title = models.CharField(max_length=100)
     text = models.TextField();
-    time = models.DateTimeField()
+    time = models.DateTimeField(auto_now_add=True)
     
     convention = models.ForeignKey(Convention)
     event = models.ForeignKey(Event, blank=True, null=True)

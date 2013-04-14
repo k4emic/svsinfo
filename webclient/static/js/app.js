@@ -1,17 +1,17 @@
 jQuery(document).ready(function($) {
     $('.event-item').click(function() {
         
-        $desc = $(this).children('.event-description').first();
+        var $elm = $(this).children('.collapse-container').first();
+        var has_description = ($elm.children('.event-description').first().text().length > 0);
+        var has_news = ($elm.children('.event-news-container').length > 0);
         
-        if($desc.text().length == 0) {
-            return; // no text to show
+        if(!has_description && !has_news) {
+            return false;
         }
         
-        $('.event-description').not($desc).slideUp();
+        $('.collapse-container').not($elm).slideUp();
         
-        if($desc.text().length > 0) {
-            $desc.slideDown();
-        }
+        $elm.slideDown();
         
     });
     

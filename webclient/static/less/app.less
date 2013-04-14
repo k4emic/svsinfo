@@ -73,16 +73,11 @@ body > .container {
         .event-item {
             
             .border-bottom;
-            
             .row();
-            .makeColumn(9);
-            padding: 5px 0;
-            margin: 0;
             cursor:pointer;
             
             .event-time {
                 .makeColumn(1);
-                margin-left: 0;
                 height:100%;
             }
             
@@ -100,10 +95,27 @@ body > .container {
             }
             
             .event-description {
+                .makeColumn(8);
+                .offset(1);
+            }
+            
+            .collapse-container {
                 .makeColumn(9);
-                display:none;
-                margin: 0 15px 0 5px;
-                padding: 15px 0;
+                display: none;
+            }
+            
+            .event-news-container {
+                
+                .makeColumn(8);
+                .offset(1);
+                
+                .event-news-item {
+                    .event-news-time {
+                        display: block;
+                        font-style: italic;
+                        font-size: 80%;
+                    }
+                }
             }
         }
     }

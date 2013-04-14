@@ -31,6 +31,8 @@ def index(request):
         
     events = con.events_on_day(active_weekday).select_related('news_item', 'area')
     news_items = con.newsitem_set.all()
+    
+    
 
     for event in events:
         if(event.start_time < now and now < event.end_time): # current event

@@ -29,3 +29,6 @@ msgstr "Event"
 #: templates/index.html:15
 msgid "Area"
 msgstr "Sted"
+
+msgid "News about this event."
+msgstr "Nyheder om eventet"
