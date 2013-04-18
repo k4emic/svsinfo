@@ -3,7 +3,9 @@ from django.contrib import admin
 
 class EventAdmin(admin.ModelAdmin):
     ordering = ('start_time', )
-    list_display = ('name', 'start_time', 'end_time', 'area')
+    list_display = ('name', 'start_time', 'end_time', 'area', 'convention')
+    list_filter = ('convention', 'area', )
+    search_fields = ('name', )
 
 admin.site.register(Location)
 admin.site.register(Area)
