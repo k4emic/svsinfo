@@ -1,5 +1,6 @@
 @import "bootstrap.less";
 @import "grid.less";
+@import "responsive.less";
 
 .border-bottom {
     border-bottom: 1px dotted #dedede;
@@ -51,12 +52,10 @@ body > .container {
     
 }
 
-
 #index-container {
     
     .event-list-legend {
         .row;
-        .makeColumn(9);
         margin-left: 0;
         
         font-weight: bold;
@@ -150,3 +149,86 @@ body > .container {
     }
 }
 
+// resize for mobile
+@media (max-width: 720px){
+    
+    * {
+        //border: 1px dotted red;
+    }
+    
+    body > .container {
+        
+        #top {
+            
+            #top-image {
+                width: 20%;
+                float: left;
+                margin: 0;
+            }
+            
+            #top-title {
+                line-height: 40px;
+                width: 80%;
+                float: left;
+                margin: 0;
+            }
+            
+        }
+    }
+    
+    #nav-container {
+        #clock {
+            float: none;
+        }
+        .nav {
+            width: 100%;
+        }
+    }
+    
+    #index-container {
+        
+        .event-list-legend {
+            display: none;
+            .legend-area {
+                width: auto;
+            }
+        }
+        
+        .events-list {
+            width: 100%;
+            
+            .event-item {
+                
+                .event-time {
+                    width: 40px;
+                }
+                
+                .event-name {
+                    width: 80%;
+                    margin: 0px;
+                }
+                
+                .event-area {
+                    line-height: 15px;
+                    float: right;
+                    width: auto;
+                    
+                    .muted;
+                }
+                
+                .collapse-container {
+                    
+                    width: 100%;
+                    margin: 0;
+                    
+                    .event-description {
+                        width: 100%;
+                        margin-left: 20px;
+                    }
+                }
+            }
+            
+        }
+    }
+    
+}
