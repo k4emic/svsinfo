@@ -13,23 +13,30 @@
         {% include "daytabs.html" %}
     </div>
     
-    <div class="event-list-legend">
-        <span class="legend-time">{% trans "Time" %}</span>
-        <span class="legend-event">{% trans "Event" %}</span>
-        <span class="legend-area">{% trans "Area" %}</span>
+    <div class="eventlist-container">
+        <h2>{% trans "Events" %}</h2>
+        <div class="event-list-legend">
+            <span class="legend-time">{% trans "Time" %}</span>
+            <span class="legend-event">{% trans "Event" %}</span>
+            <span class="legend-area">{% trans "Area" %}</span>
+        </div>
+        
+        <ol class="events-list">
+            {% for event in events %}
+                {% include "event-item.html" %}
+            {% endfor %}
+        </ol>
+    
     </div>
     
-    <ol class="events-list">
-        {% for event in events %}
-            {% include "event-item.html" %}
-        {% endfor %}
-    </ol>
-
-    <ul class="news-list">
-        {% for news in news_items %}
-            {% include "news-item.html" %}
-        {% endfor %}
-    </ul>
+    <div class="newslist-container">
+        <h2>{% trans "News" %}</h2>
+        <ul class="news-list">
+            {% for news in news_items %}
+                {% include "news-item.html" %}
+            {% endfor %}
+        </ul>
+    </div>
 
 
 </div> {% endblock %}

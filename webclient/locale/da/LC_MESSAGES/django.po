@@ -35,3 +35,6 @@ msgstr "Nyheder om eventet"
 
 msgid "Click an event to see more information about it."
 msgstr "Tryk på et event for at få flere informationer om det."
+
+msgid "News"
+msgstr "Nyheder"

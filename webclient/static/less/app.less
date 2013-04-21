@@ -38,9 +38,11 @@ body > .container {
 
 #nav-container {
     .row;
+    margin: 0;
     
     .nav {
         .makeColumn(9);
+        margin: 0;
     }
     
     #clock {
@@ -53,6 +55,10 @@ body > .container {
 }
 
 #index-container {
+    
+    .eventlist-container {
+        .makeColumn(9);
+    }
     
     .event-list-legend {
         .row;
@@ -75,7 +81,7 @@ body > .container {
     }
     
     .events-list {
-        .makeColumn(9);
+        
         margin-left: 0;
         list-style:none;
         
@@ -129,23 +135,27 @@ body > .container {
         }
     }
     
-    .news-list{
+    .newslist-container {
         .makeColumn(3);
-        list-style: none;
         
-        li {
-            margin: 10px 0;
+        .news-list{
+            margin: 0;
+            list-style: none;
             
-            .border-bottom;
-            .news-title {
-                font-weight: bold;
+            li {
+                margin: 10px 0;
+                
+                .border-bottom;
+                .news-title {
+                    font-weight: bold;
+                }
+                
+                .news-content {
+                    margin: 5px 0;
+                }
             }
-            
-            .news-content {
-                margin: 5px 0;
-            }
+        
         }
-        
     }
 }
 
