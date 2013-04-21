@@ -189,6 +189,7 @@ body > .container {
     #nav-container {
         #clock {
             float: none;
+            margin: 0;
         }
         .nav {
             width: 100%;
@@ -197,48 +198,60 @@ body > .container {
     
     #index-container {
         
-        .event-list-legend {
-            display: none;
-            .legend-area {
-                width: auto;
-            }
-        }
-        
-        .events-list {
+        .eventlist-container {
             width: 100%;
+            margin: 0;
             
-            .event-item {
-                
-                .event-time {
-                    width: 40px;
-                }
-                
-                .event-name {
-                    width: 80%;
-                    margin: 0px;
-                }
-                
-                .event-area {
-                    line-height: 15px;
-                    float: right;
+            
+            .event-list-legend {
+                display: none;
+                .legend-area {
                     width: auto;
-                    
-                    .muted;
                 }
+            }
+            
+            .events-list {
+                width: 100%;
                 
-                .collapse-container {
+                .event-item {
                     
-                    width: 100%;
-                    margin: 0;
+                    .event-time {
+                        width: 40px;
+                    }
                     
-                    .event-description {
+                    .event-name {
+                        width: auto;
+                        margin: 0px;
+                    }
+                    
+                    .event-area {
+                        line-height: 40px;
+                        float: right;
+                        width: 85px;
+                        margin: 0px;
+                        
+                        .muted;
+                    }
+                    
+                    .collapse-container {
+                        
                         width: 100%;
-                        margin-left: 20px;
+                        margin: 0;
+                        
+                        .event-description {
+                            width: 100%;
+                            margin-left: 20px;
+                        }
                     }
                 }
             }
-            
         }
+        
+        .newslist-container {
+            margin: 0px;
+            width: 100%;
+        }
+        
     }
     
 }
