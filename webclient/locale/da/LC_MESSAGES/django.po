@@ -30,7 +30,7 @@ msgstr "Event"
 msgid "Area"
 msgstr "Sted"
 
-msgid "News about this event."
+msgid "News about this event"
 msgstr "Nyheder om eventet"
 
 msgid "Click an event to see more information about it."

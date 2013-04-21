@@ -22,7 +22,7 @@ def index(request):
         except ValueError:
             pass
         
-    events = con.events_on_day(active_weekday).select_related('news_item', 'area')
+    events = con.events_on_day(active_weekday).prefetch_related('newsitem_set', 'area')
     news_items = con.newsitem_set.all()
     
     

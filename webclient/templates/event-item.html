@@ -9,13 +9,14 @@
     <div class="collapse-container">
         <p class="event-description">{{ event.description|linebreaksbr }}</p>
         
-        {% if event.newsitem_set.count > 0 %}
+        {% if event.newsitem_set.all %}
         <div class="event-news-container">
-            <strong>{% trans "News about this event." %}</strong>
+            <strong>{% trans "News about this event" %}</strong>
             {% for news in event.newsitem_set.all %}
                 <div class="event-news-item">
-                    <span class="event-news-time">{{ news.time|date:"l H:i" }}</span>
-                    <p class="event-news-title">{{ news.title }}</p>
+                    <span class="event-news-time">{{ news.time|date:"D H:i" }}</span>
+                    <strong class="event-news-title">{{ news.title }}</strong>
+                    <p class="event-news-content">{{ news.text|linebreaksbr }}</p>
                 </div>
             {% endfor %}
         </div>
