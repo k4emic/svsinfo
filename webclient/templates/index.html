@@ -3,18 +3,16 @@
 {% block content %}
 <div id="index-container">
     
-    <p class="event-hint">
-    {% trans "Click an event to see more information about it." %}
-    </p>
-    
     <div id="nav-container">
         <div id="clock">&nbsp;</div>
-        
         {% include "daytabs.html" %}
     </div>
     
     <div class="eventlist-container">
         <h2>{% trans "Events" %}</h2>
+        <p class="event-hint">
+        {% trans "Click an event to see more information about it." %}
+        </p>
         <div class="event-list-legend">
             <span class="legend-time">{% trans "Time" %}</span>
             <span class="legend-event">{% trans "Event" %}</span>
