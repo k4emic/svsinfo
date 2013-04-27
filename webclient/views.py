@@ -1,6 +1,7 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from service import models
+from datetime import datetime
 import logging
 logger = logging.getLogger(__name__)
 
@@ -15,7 +16,9 @@ def index(request):
     for date in dates: # build list of weekdays
         weekdays[date.isoweekday()] = date.strftime('%A')
         
-    active_weekday = dates[0].isoweekday() 
+    now = datetime.now()
+    active_weekday = now.isoweekday()
+    
     if('day' in request.GET):
         try:
             active_weekday = int(request.GET['day'])
